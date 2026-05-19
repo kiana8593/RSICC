@@ -34,6 +34,20 @@ conda activate RSICCformer_env
 pip install -r requirements.txt
 ```
 
+### Conda environment (environment.yml provided)
+If the repository root contains `environment.yml`, you can create and activate the environment with:
+```bash
+conda env create -f environment.yml
+conda activate RSICCformer_env
+```
+To use a different environment name:
+```bash
+conda env create -f environment.yml --name myenv
+conda activate myenv
+```
+This `environment.yml` was exported with `conda env export --no-builds` and includes the main dependencies and channels. For more portable or more strictly reproducible options, see the export choices described above.
+
+
 ### Data preparation
 Firstly, put the downloaded dataset in `./LEVIR_CC_dataset/`.
 Then preprocess dataset as follows:
